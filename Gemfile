@@ -13,6 +13,8 @@ gem 'puma', '~> 3.11'
 #This gem is a port of Perl's Data::Faker library that generates fake data.
 gem 'faker'
 
+gem 'rails-i18n', '~> 5.1'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

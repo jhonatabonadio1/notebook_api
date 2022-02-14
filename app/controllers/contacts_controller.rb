@@ -5,12 +5,17 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
-    render json: @contacts
+    # only: mostra apenas o que foi pedido, ex: only: [:name, :email]
+    # except: o inverso do only
+    # status: mostra o status da requisição, etc: status: :ok
+    # method: adiciona um campo na resposta (Adicionar no model)
+
+    render json: @contacts #, methods: [:birthdate_br]
   end
 
   # GET /contacts/1
   def show
-    render json: @contact
+    render json: @contact.to_br
   end
 
   # POST /contacts
@@ -46,6 +51,6 @@ class ContactsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :birthdate)
+      params.require(:contact).permit(:name, :email, :birthdate, :kind_id)
     end
 end
