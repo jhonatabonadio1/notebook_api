@@ -15,6 +15,10 @@ gem 'faker'
 
 gem 'rails-i18n', '~> 5.1'
 
+gem 'pry-rails'
+
+gem 'active_model_serializers', '~> 0.10.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
